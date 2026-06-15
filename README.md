@@ -24,4 +24,4 @@ Safari Trails Travel Agency is a responsive travel website developed for the Web
 - Destination search/filter
 
 ## Developer
-[Your Name]
+[Mohamed Osman]
