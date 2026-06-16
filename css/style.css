@@ -1,0 +1,203 @@
+/* =========================================================
+   Safari Trails Travel Agency — Base Stylesheet
+   Design tokens: colour palette, typography, layout primitives
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Colour palette */
+  --color-bark: #121212;     
+  --color-grass: #D9D6D6;   
+  --color-surface: #2A1717; 
+  --color-amber: #A8434A;    
+  --color-rust: #7A2E2E;     
+  --color-olive: #8C8C8C;    
+
+  /* Typography */
+  --font-display: "Zilla Slab", serif;
+  --font-body: "Karla", sans-serif;
+}
+
+/*  Base */
+body {
+  font-family: var(--font-body);
+  color: var(--color-grass);
+  background-color: var(--color-bark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-grass);
+}
+
+a { color: var(--color-rust); text-decoration: none; }
+a:hover { color: var(--color-amber); }
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-amber);
+}
+
+/* Navigation */
+.navbar {
+  background-color: var(--color-bark);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar-brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--color-grass) !important;
+}
+
+.navbar-nav .nav-link {
+  color: var(--color-grass) !important;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: var(--color-amber) !important;
+}
+
+/* Buttons */
+.btn-trail {
+  background-color: var(--color-amber);
+  border: 2px solid var(--color-amber);
+  color: var(--color-grass);
+  font-weight: 700;
+  padding: 0.6rem 1.6rem;
+}
+
+.btn-trail:hover {
+  background-color: var(--color-rust);
+  border-color: var(--color-rust);
+  color: var(--color-grass);
+}
+
+.btn-trail-outline {
+  background-color: transparent;
+  border: 2px solid var(--color-grass);
+  color: var(--color-grass);
+  font-weight: 700;
+  padding: 0.6rem 1.6rem;
+}
+
+.btn-trail-outline:hover {
+  background-color: var(--color-grass);
+  border-color: var(--color-grass);
+  color: var(--color-bark);
+}
+
+/* Hero */
+.hero {
+  background-color: var(--color-bark);
+  color: var(--color-grass);
+  padding: 4.5rem 0 2.5rem;
+}
+
+.hero h1 { color: var(--color-grass); font-size: 2.6rem; margin: 1rem 0 1.25rem; }
+.hero .lead { max-width: 36rem; color: var(--color-grass); opacity: 0.92; margin-bottom: 1.75rem; }
+.hero .btn { margin: 0.25rem 0.5rem 0.25rem 0; }
+
+/* Team avatars (initials, used until real photos are added) */
+.avatar-initials {
+  width: 80px; height: 80px; border-radius: 50%;
+  background-color: var(--color-bark);
+  color: var(--color-grass);
+  font-family: var(--font-display);
+  font-weight: 700; font-size: 1.5rem;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1rem auto;
+}
+
+.team-card {
+  background-color: var(--color-surface);
+  border-radius: 0.5rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  height: 100%;
+}
+
+.team-card .role {
+  color: var(--color-rust);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.75rem;
+}
+
+/* Page header (for About / Contact) */
+.page-header {
+  background-color: var(--color-bark);
+  color: var(--color-grass);
+  padding: 3.5rem 0;
+  text-align: center;
+}
+
+.page-header h1 { color: var(--color-grass); margin-bottom: 0.5rem; }
+
+/* Contact info + form */
+.contact-info-card {
+  background-color: var(--color-surface);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  height: 100%;
+}
+
+.contact-info-card dt {
+  font-weight: 700;
+  color: var(--color-rust);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  margin-top: 1rem;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+  background-color: var(--color-surface);
+  color: var(--color-grass);
+  border: 1px solid var(--color-rust);
+  border-radius: 0.4rem;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+  border-color: var(--color-amber);
+  box-shadow: 0 0 0 0.2rem rgba(168, 67, 74, 0.3);
+}
+
+.contact-form label { font-weight: 600; margin-bottom: 0.3rem; }
+
+/* -----------------------------------------------------------
+   Footer
+   ----------------------------------------------------------- */
+footer {
+  background-color: var(--color-bark);
+  color: var(--color-grass);
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+footer a { color: var(--color-grass); }
+footer a:hover { color: var(--color-amber); }
+
+/* -----------------------------------------------------------
+   Responsive tweaks
+   ----------------------------------------------------------- */
+@media (max-width: 576px) {
+  .hero { padding: 3rem 0 2rem; text-align: center; }
+  .hero h1 { font-size: 2rem; }
+  .hero .btn { display: block; width: 100%; margin: 0.4rem 0; }
+  .trail-map .stop-label { font-size: 11px; }
+}
