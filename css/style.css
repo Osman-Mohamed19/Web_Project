@@ -105,6 +105,66 @@ a:hover { color: var(--color-amber); }
 .hero h1 { color: var(--color-grass); font-size: 2.6rem; margin: 1rem 0 1.25rem; }
 .hero .lead { max-width: 36rem; color: var(--color-grass); opacity: 0.92; margin-bottom: 1.75rem; }
 .hero .btn { margin: 0.25rem 0.5rem 0.25rem 0; }
+.trail-map { width: 100%; height: auto; margin-top: 2rem; }
+
+.trail-map .trail-path {
+  fill: none;
+  stroke: var(--color-rust);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 2 12;
+}
+
+.trail-map .trail-stop circle {
+  fill: var(--color-amber);
+  stroke: var(--color-grass);
+  stroke-width: 3;
+}
+
+.trail-map .trail-stop .stop-number {
+  fill: var(--color-bark);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.trail-map .trail-stop .stop-label {
+  fill: var(--color-grass);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  text-anchor: middle;
+}
+
+.trail-divider {
+  border: none;
+  border-top: 3px dotted var(--color-rust);
+  position: relative;
+  margin: 3rem 0;
+}
+
+.trail-divider::after {
+  content: "";
+  position: absolute;
+  top: -8px; left: 50%;
+  transform: translateX(-50%);
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background-color: var(--color-amber);
+  border: 2px solid var(--color-grass);
+}
+
+.value-card {
+  background-color: var(--color-surface);
+  border-radius: 0.5rem;
+  padding: 2rem 1.5rem;
+  height: 100%;
+  border-top: 4px solid var(--color-amber);
+}
+
+.value-card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
 
 /* Team avatars (initials, used until real photos are added) */
 .avatar-initials {
