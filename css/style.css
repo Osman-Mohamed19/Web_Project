@@ -177,9 +177,7 @@ a:hover { color: var(--color-amber); }
 
 .contact-form label { font-weight: 600; margin-bottom: 0.3rem; }
 
-/* -----------------------------------------------------------
-   Footer
-   ----------------------------------------------------------- */
+/* Footer */
 footer {
   background-color: var(--color-bark);
   color: var(--color-grass);
@@ -192,9 +190,7 @@ footer {
 footer a { color: var(--color-grass); }
 footer a:hover { color: var(--color-amber); }
 
-/* -----------------------------------------------------------
-   Responsive tweaks
-   ----------------------------------------------------------- */
+/* Responsive tweaks */
 @media (max-width: 576px) {
   .hero { padding: 3rem 0 2rem; text-align: center; }
   .hero h1 { font-size: 2rem; }
