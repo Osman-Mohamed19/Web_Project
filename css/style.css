@@ -246,4 +246,7 @@ footer a:hover { color: var(--color-amber); }
   .hero h1 { font-size: 2rem; }
   .hero .btn { display: block; width: 100%; margin: 0.4rem 0; }
   .trail-map .stop-label { font-size: 11px; }
+  .page-header { padding: 2.5rem 0; }
+  .team-card,
+  .contact-info-card { margin-bottom: 1rem; }
 }
