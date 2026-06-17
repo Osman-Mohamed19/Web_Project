@@ -6,20 +6,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Colour palette */
-  --color-bark: #121212;     
-  --color-grass: #D9D6D6;   
-  --color-surface: #2A1717; 
-  --color-amber: #A8434A;    
-  --color-rust: #7A2E2E;     
-  --color-olive: #8C8C8C;    
+  --color-bark: #121212;     /* near-black — page background, header, footer, hero */
+  --color-grass: #D9D6D6;    /* light warm grey — body text, headings, text on dark sections */
+  --color-surface: #2A1717;  /* dark maroon — card / surface background */
+  --color-amber: #A8434A;    /* primary accent — CTAs, active states, links on hover */
+  --color-rust: #7A2E2E;     /* secondary accent — hover state, darker red */
+  --color-olive: #8C8C8C;    /* tertiary accent — muted secondary text, tags */
 
-  /* Typography */
   --font-display: "Zilla Slab", serif;
   --font-body: "Karla", sans-serif;
 }
 
-/*  Base */
 body {
   font-family: var(--font-body);
   color: var(--color-grass);
@@ -43,7 +40,6 @@ a:hover { color: var(--color-amber); }
   color: var(--color-amber);
 }
 
-/* Navigation */
 .navbar {
   background-color: var(--color-bark);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -66,7 +62,6 @@ a:hover { color: var(--color-amber); }
   color: var(--color-amber) !important;
 }
 
-/* Buttons */
 .btn-trail {
   background-color: var(--color-amber);
   border: 2px solid var(--color-amber);
@@ -95,7 +90,6 @@ a:hover { color: var(--color-amber); }
   color: var(--color-bark);
 }
 
-/* Hero */
 .hero {
   background-color: var(--color-bark);
   color: var(--color-grass);
@@ -105,11 +99,12 @@ a:hover { color: var(--color-amber); }
 .hero h1 { color: var(--color-grass); font-size: 2.6rem; margin: 1rem 0 1.25rem; }
 .hero .lead { max-width: 36rem; color: var(--color-grass); opacity: 0.92; margin-bottom: 1.75rem; }
 .hero .btn { margin: 0.25rem 0.5rem 0.25rem 0; }
+
 .trail-map { width: 100%; height: auto; margin-top: 2rem; }
 
 .trail-map .trail-path {
   fill: none;
-  stroke: var(--color-rust);
+  stroke: var(--color-olive);
   stroke-width: 3;
   stroke-linecap: round;
   stroke-dasharray: 2 12;
@@ -140,7 +135,7 @@ a:hover { color: var(--color-amber); }
 
 .trail-divider {
   border: none;
-  border-top: 3px dotted var(--color-rust);
+  border-top: 3px dotted var(--color-olive);
   position: relative;
   margin: 3rem 0;
 }
@@ -166,7 +161,6 @@ a:hover { color: var(--color-amber); }
 
 .value-card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
 
-/* Team avatars (initials, used until real photos are added) */
 .avatar-initials {
   width: 80px; height: 80px; border-radius: 50%;
   background-color: var(--color-bark);
@@ -194,7 +188,6 @@ a:hover { color: var(--color-amber); }
   margin-bottom: 0.75rem;
 }
 
-/* Page header (for About / Contact) */
 .page-header {
   background-color: var(--color-bark);
   color: var(--color-grass);
@@ -204,7 +197,6 @@ a:hover { color: var(--color-amber); }
 
 .page-header h1 { color: var(--color-grass); margin-bottom: 0.5rem; }
 
-/* Contact info + form */
 .contact-info-card {
   background-color: var(--color-surface);
   border-radius: 0.5rem;
@@ -237,7 +229,6 @@ a:hover { color: var(--color-amber); }
 
 .contact-form label { font-weight: 600; margin-bottom: 0.3rem; }
 
-/* Footer */
 footer {
   background-color: var(--color-bark);
   color: var(--color-grass);
@@ -250,7 +241,6 @@ footer {
 footer a { color: var(--color-grass); }
 footer a:hover { color: var(--color-amber); }
 
-/* Responsive tweaks */
 @media (max-width: 576px) {
   .hero { padding: 3rem 0 2rem; text-align: center; }
   .hero h1 { font-size: 2rem; }
