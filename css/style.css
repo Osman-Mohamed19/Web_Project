@@ -170,6 +170,16 @@ a:hover { color: var(--color-amber); }
   display: flex; align-items: center; justify-content: center;
   margin: 0 auto 1rem auto;
 }
+.team-photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-amber);
+  margin: 0 auto 1rem auto;
+  display: block;
+}
 
 .team-card {
   background-color: var(--color-surface);
