@@ -170,6 +170,7 @@ a:hover { color: var(--color-amber); }
   display: flex; align-items: center; justify-content: center;
   margin: 0 auto 1rem auto;
 }
+
 .team-photo {
   width: 96px;
   height: 96px;
@@ -207,38 +208,6 @@ a:hover { color: var(--color-amber); }
 
 .page-header h1 { color: var(--color-grass); margin-bottom: 0.5rem; }
 
-.contact-info-card {
-  background-color: var(--color-surface);
-  border-radius: 0.5rem;
-  padding: 2rem;
-  height: 100%;
-}
-
-.contact-info-card dt {
-  font-weight: 700;
-  color: var(--color-rust);
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  letter-spacing: 0.05em;
-  margin-top: 1rem;
-}
-
-.contact-form .form-control,
-.contact-form .form-select {
-  background-color: var(--color-surface);
-  color: var(--color-grass);
-  border: 1px solid var(--color-rust);
-  border-radius: 0.4rem;
-}
-
-.contact-form .form-control:focus,
-.contact-form .form-select:focus {
-  border-color: var(--color-amber);
-  box-shadow: 0 0 0 0.2rem rgba(168, 67, 74, 0.3);
-}
-
-.contact-form label { font-weight: 600; margin-bottom: 0.3rem; }
-
 footer {
   background-color: var(--color-bark);
   color: var(--color-grass);
@@ -257,6 +226,5 @@ footer a:hover { color: var(--color-amber); }
   .hero .btn { display: block; width: 100%; margin: 0.4rem 0; }
   .trail-map .stop-label { font-size: 11px; }
   .page-header { padding: 2.5rem 0; }
-  .team-card,
-  .contact-info-card { margin-bottom: 1rem; }
+  .team-card { margin-bottom: 1rem; }
 }
