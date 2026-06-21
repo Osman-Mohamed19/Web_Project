@@ -6,18 +6,27 @@
   <title>Contact Us | Safari Trails Travel Agency</title>
   <meta name="description" content="Get in touch with Safari Trails Travel Agency to plan a safari or coastal trip across Kenya.">
 
+  <!-- Bootstrap 5 CSS for responsive grid and components -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Safari Trails styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <!-- Site Header & Navigation -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
       <div class="container">
+
+        <!-- Brand name links back to homepage -->
         <a class="navbar-brand" href="index.html">Safari Trails</a>
+
+        <!-- Hamburger button — collapses navbar on mobile -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- Navigation links — Contact is marked active on this page -->
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -29,10 +38,12 @@
             <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
           </ul>
         </div>
+
       </div>
     </nav>
   </header>
 
+  <!-- Page Header Banner -->
   <section class="page-header">
     <div class="container">
       <p class="eyebrow">Get In Touch</p>
@@ -40,19 +51,26 @@
     </div>
   </section>
 
+  <!-- Contact Section — info card on the left, form on the right -->
   <section class="py-5">
     <div class="container">
       <div class="row g-4">
+
+        <!-- Left column: office contact details -->
         <div class="col-lg-4">
           <div class="contact-info-card">
             <h2 class="h4">Safari Trails Travel Agency</h2>
+
+            <!-- Definition list for contact details -->
             <dl class="mb-0">
               <dt>Office</dt>
               <dd>Riverside Drive, Westlands<br>Nairobi, Kenya</dd>
 
+              <!-- Clickable phone number -->
               <dt>Phone</dt>
               <dd><a href="tel:+254712345678">+254 712 345 678</a></dd>
 
+              <!-- Clickable email address -->
               <dt>Email</dt>
               <dd><a href="mailto:info@safaritrailstravel.co.ke">info@safaritrailstravel.co.ke</a></dd>
 
@@ -62,17 +80,25 @@
           </div>
         </div>
 
+        <!-- Right column: enquiry form -->
+        <!-- novalidate disables browser default validation so JS validation runs instead -->
         <div class="col-lg-8">
           <form class="contact-form" novalidate>
             <div class="row g-3">
+
+              <!-- Full name field -->
               <div class="col-md-6">
                 <label for="fullName" class="form-label">Full name</label>
                 <input type="text" class="form-control" id="fullName" name="fullName" required>
               </div>
+
+              <!-- Email address field -->
               <div class="col-md-6">
                 <label for="email" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="email" name="email" required>
               </div>
+
+              <!-- Trip interest dropdown -->
               <div class="col-md-6">
                 <label for="tripInterest" class="form-label">Trip interest</label>
                 <select class="form-select" id="tripInterest" name="tripInterest" required>
@@ -83,31 +109,42 @@
                   <option value="custom">Custom / not sure yet</option>
                 </select>
               </div>
+
+              <!-- Preferred travel month picker -->
               <div class="col-md-6">
                 <label for="travelDate" class="form-label">Preferred travel month</label>
                 <input type="month" class="form-control" id="travelDate" name="travelDate">
               </div>
+
+              <!-- Free text message field -->
               <div class="col-12">
                 <label for="message" class="form-label">Tell us about your trip</label>
                 <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
               </div>
+
+              <!-- Submit button — triggers JS validation on click -->
               <div class="col-12">
                 <button type="submit" class="btn btn-trail btn-lg">Send enquiry</button>
               </div>
+
             </div>
           </form>
         </div>
+
       </div>
     </div>
   </section>
 
+  <!-- Site Footer -->
   <footer>
     <div class="container">
       <p>&copy; 2026 Safari Trails Travel Agency, Nairobi, Kenya. All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- Bootstrap JS — required for navbar collapse on mobile -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript for form validation and filters -->
   <script src="js/script.js"></script>
 </body>
 </html>
