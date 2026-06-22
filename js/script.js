@@ -81,3 +81,47 @@
   });
 
 })(); // runs the function immediately when the script loads
+
+/* ----------------------------------------------------------
+   DESTINATION FILTER
+   Filters destination cards by category when a button is clicked
+   ---------------------------------------------------------- */
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Find all filter buttons inside the destinations filter bar
+  const filterButtons = document.querySelectorAll('#destinationFilters .filter-btn');
+
+  // Find all destination card wrappers in the grid
+  const destinationItems = document.querySelectorAll('#destinationGrid .destination-card-wrapper');
+
+  // If there are no filter buttons on this page, stop here
+  if (!filterButtons.length) return;
+
+  // Listen for a click on each filter button
+  filterButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+
+      // Read which category this button filters for
+      const filter = btn.getAttribute('data-filter');
+
+      // Remove active style from all buttons then set it on the clicked one
+      filterButtons.forEach(function (b) {
+        b.classList.remove('active', 'btn-trail');
+        b.classList.add('btn-trail-outline');
+      });
+      btn.classList.add('active', 'btn-trail');
+      btn.classList.remove('btn-trail-outline');
+
+      // Show or hide each card depending on its category
+      destinationItems.forEach(function (item) {
+        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+          item.style.display = ''; // show the card
+        } else {
+          item.style.display = 'none'; // hide the card
+        }
+      });
+
+    });
+  });
+
+}); // runs after the page has fully loaded
