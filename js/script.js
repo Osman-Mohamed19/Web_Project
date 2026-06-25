@@ -125,3 +125,73 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 }); // runs after the page has fully loaded
+/* ----------------------------------------------------------
+   GALLERY FILTER
+   Filters photo grid by category when a button is clicked
+   ---------------------------------------------------------- */
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Find all filter buttons inside the gallery filter bar
+  const filterButtons = document.querySelectorAll('#galleryFilters .filter-btn');
+
+  // Find all photo wrappers in the gallery grid
+  const galleryItems = document.querySelectorAll('#galleryGrid .gallery-item-wrapper');
+
+  // If there are no filter buttons on this page, stop here
+  if (!filterButtons.length) return;
+
+  // Listen for a click on each filter button
+  filterButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+
+      // Read which category this button filters for
+      const filter = btn.getAttribute('data-filter');
+
+      // Remove active style from all buttons then set it on the clicked one
+      filterButtons.forEach(function (b) {
+        b.classList.remove('active', 'btn-trail');
+        b.classList.add('btn-trail-outline');
+      });
+      btn.classList.add('active', 'btn-trail');
+      btn.classList.remove('btn-trail-outline');
+
+      // Show or hide each photo depending on its category
+      galleryItems.forEach(function (item) {
+        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+          item.style.display = ''; // show the photo
+        } else {
+          item.style.display = 'none'; // hide the photo
+        }
+      });
+
+    });
+  });
+
+}); // runs after the page has fully loaded
+
+/* ----------------------------------------------------------
+   GALLERY LIGHTBOX
+   Populates the modal with the clicked photo and caption
+   ---------------------------------------------------------- */
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Find the lightbox modal
+  const modal = document.getElementById('galleryModal');
+
+  // If there is no modal on this page, stop here
+  if (!modal) return;
+
+  // When the modal is about to open, grab the image and caption from the clicked item
+  modal.addEventListener('show.bs.modal', function (event) {
+    const trigger = event.relatedTarget;
+    document.getElementById('modalImage').src = trigger.getAttribute('data-img');
+    document.getElementById('modalImage').alt = trigger.getAttribute('data-caption');
+    document.getElementById('modalCaption').textContent = trigger.getAttribute('data-caption');
+  });
+
+  // Clear the image src when the modal closes to avoid a flash of the old photo
+  modal.addEventListener('hidden.bs.modal', function () {
+    document.getElementById('modalImage').src = '';
+  });
+
+}); // runs after the page has fully loaded
