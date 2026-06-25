@@ -17,6 +17,10 @@
   --font-body: "Karla", sans-serif;
 }
 
+/* ----------------------------------------------------------
+   BASE
+   ---------------------------------------------------------- */
+
 body {
   font-family: var(--font-body);
   color: var(--color-grass);
@@ -40,6 +44,10 @@ a:hover { color: var(--color-amber); }
   color: var(--color-amber);
 }
 
+/* ----------------------------------------------------------
+   NAVIGATION
+   ---------------------------------------------------------- */
+
 .navbar {
   background-color: var(--color-bark);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -61,6 +69,10 @@ a:hover { color: var(--color-amber); }
 .navbar-nav .nav-link:hover {
   color: var(--color-amber) !important;
 }
+
+/* ----------------------------------------------------------
+   BUTTONS
+   ---------------------------------------------------------- */
 
 .btn-trail {
   background-color: var(--color-amber);
@@ -90,6 +102,10 @@ a:hover { color: var(--color-amber); }
   color: var(--color-bark);
 }
 
+/* ----------------------------------------------------------
+   HERO SECTION
+   ---------------------------------------------------------- */
+
 .hero {
   background-color: var(--color-bark);
   color: var(--color-grass);
@@ -100,6 +116,7 @@ a:hover { color: var(--color-amber); }
 .hero .lead { max-width: 36rem; color: var(--color-grass); opacity: 0.92; margin-bottom: 1.75rem; }
 .hero .btn { margin: 0.25rem 0.5rem 0.25rem 0; }
 
+/* SVG route map on homepage */
 .trail-map { width: 100%; height: auto; margin-top: 2rem; }
 
 .trail-map .trail-path {
@@ -133,6 +150,10 @@ a:hover { color: var(--color-amber); }
   text-anchor: middle;
 }
 
+/* ----------------------------------------------------------
+   DIVIDER
+   ---------------------------------------------------------- */
+
 .trail-divider {
   border: none;
   border-top: 3px dotted var(--color-olive);
@@ -151,6 +172,23 @@ a:hover { color: var(--color-amber); }
   border: 2px solid var(--color-grass);
 }
 
+/* ----------------------------------------------------------
+   PAGE HEADER BANNER
+   ---------------------------------------------------------- */
+
+.page-header {
+  background-color: var(--color-bark);
+  color: var(--color-grass);
+  padding: 3.5rem 0;
+  text-align: center;
+}
+
+.page-header h1 { color: var(--color-grass); margin-bottom: 0.5rem; }
+
+/* ----------------------------------------------------------
+   HOME — VALUE CARDS
+   ---------------------------------------------------------- */
+
 .value-card {
   background-color: var(--color-surface);
   border-radius: 0.5rem;
@@ -160,6 +198,10 @@ a:hover { color: var(--color-amber); }
 }
 
 .value-card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+
+/* ----------------------------------------------------------
+   ABOUT — TEAM CARDS
+   ---------------------------------------------------------- */
 
 .avatar-initials {
   width: 80px; height: 80px; border-radius: 50%;
@@ -199,14 +241,9 @@ a:hover { color: var(--color-amber); }
   margin-bottom: 0.75rem;
 }
 
-.page-header {
-  background-color: var(--color-bark);
-  color: var(--color-grass);
-  padding: 3.5rem 0;
-  text-align: center;
-}
-
-.page-header h1 { color: var(--color-grass); margin-bottom: 0.5rem; }
+/* ----------------------------------------------------------
+   CONTACT PAGE
+   ---------------------------------------------------------- */
 
 .contact-info-card {
   background-color: var(--color-surface);
@@ -239,58 +276,6 @@ a:hover { color: var(--color-amber); }
 }
 
 .contact-form label { font-weight: 600; margin-bottom: 0.3rem; }
-
-/* ----------------------------------------------------------
-   GALLERY GRID
-   ---------------------------------------------------------- */
-
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 6px;
-  cursor: pointer;
-  aspect-ratio: 4 / 3;
-  background: var(--color-surface);
-}
-
-.gallery-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.35s ease;
-}
-
-.gallery-item:hover .gallery-img {
-  transform: scale(1.06);
-}
-
-/* Hover overlay label */
-.gallery-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(42, 26, 10, 0.45);
-  display: flex;
-  align-items: flex-end;
-  padding: 0.75rem;
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
-
-.gallery-item:hover .gallery-overlay {
-  opacity: 1;
-}
-
-.gallery-overlay span {
-  background: var(--color-amber);
-  color: var(--color-grass);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 2px 8px;
-  border-radius: 3px;
-}
 
 /* ----------------------------------------------------------
    DESTINATION CARDS
@@ -370,6 +355,227 @@ a:hover { color: var(--color-amber); }
 }
 
 /* ----------------------------------------------------------
+   GALLERY GRID
+   ---------------------------------------------------------- */
+
+/* Photo item — fixed aspect ratio with hover zoom */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  cursor: pointer;
+  aspect-ratio: 4 / 3;
+  background: var(--color-surface);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.06);
+}
+
+/* Dark overlay that fades in on hover */
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 18, 18, 0.55);
+  display: flex;
+  align-items: flex-end;
+  padding: 0.75rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+/* Category label badge inside the overlay */
+.gallery-overlay span {
+  background: var(--color-amber);
+  color: var(--color-grass);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+/* ----------------------------------------------------------
+   PACKAGES PAGE
+   ---------------------------------------------------------- */
+
+/* Card container */
+.package-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-rust);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Featured card — highlighted with amber border */
+.package-card--featured {
+  border-color: var(--color-amber);
+  box-shadow: 0 4px 16px rgba(168, 67, 74, 0.25);
+}
+
+/* Custom card — dashed border style */
+.package-card--custom {
+  border-style: dashed;
+  border-color: var(--color-olive);
+}
+
+/* Dark header band at the top of each card */
+.package-header {
+  background: var(--color-bark);
+  color: var(--color-grass);
+  padding: 1.4rem 1.4rem 1.1rem;
+}
+
+.package-card--featured .package-header {
+  background: var(--color-amber);
+}
+
+.package-header .eyebrow {
+  color: var(--color-olive);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.package-card--featured .package-header .eyebrow {
+  color: var(--color-grass);
+}
+
+.package-duration {
+  color: var(--color-olive);
+  font-size: 0.85rem;
+  margin-bottom: 0;
+}
+
+.package-card--featured .package-duration {
+  color: var(--color-grass);
+}
+
+/* Card body */
+.package-body {
+  padding: 1.4rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.package-price {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-rust);
+  color: var(--color-grass);
+}
+
+/* Includes list with amber tick marks */
+.package-includes {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  flex: 1;
+}
+
+.package-includes li {
+  padding: 0.28rem 0 0.28rem 1.4rem;
+  position: relative;
+  font-size: 0.9rem;
+  color: var(--color-grass);
+}
+
+.package-includes li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-amber);
+  font-weight: 700;
+}
+
+/* ----------------------------------------------------------
+   TESTIMONIALS PAGE
+   ---------------------------------------------------------- */
+
+/* Testimonial card */
+.testimonial-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-rust);
+  border-radius: 8px;
+  padding: 1.75rem;
+  height: 100%;
+}
+
+/* Star rating — amber colour */
+.stars {
+  color: var(--color-amber);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card blockquote {
+  margin: 0 0 1.25rem 0;
+  padding: 0;
+  border: none;
+  font-style: italic;
+  color: var(--color-grass);
+}
+
+.testimonial-card blockquote p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.testimonial-author {
+  border-top: 1px solid var(--color-rust);
+  padding-top: 1rem;
+}
+
+.author-name {
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+  color: var(--color-grass);
+}
+
+.author-detail {
+  font-size: 0.8rem;
+  color: var(--color-olive);
+  margin: 0;
+}
+
+/* Stats bar numbers and labels */
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-amber);
+  margin: 0;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--color-olive);
+  margin: 0.3rem 0 0 0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ----------------------------------------------------------
    SITE FOOTER
    ---------------------------------------------------------- */
 
@@ -397,4 +603,7 @@ footer a:hover { color: var(--color-amber); }
   .page-header { padding: 2.5rem 0; }
   .team-card,
   .contact-info-card { margin-bottom: 1rem; }
+  .destination-card,
+  .package-card,
+  .testimonial-card { margin-bottom: 1rem; }
 }
