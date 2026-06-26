@@ -278,6 +278,23 @@ a:hover { color: var(--color-amber); }
 .contact-form label { font-weight: 600; margin-bottom: 0.3rem; }
 
 /* ----------------------------------------------------------
+   FILTER BAR — destinations and gallery pages
+   ---------------------------------------------------------- */
+
+/* Override Bootstrap bg-light so filter bar matches dark page */
+.filter-bar {
+  background-color: var(--color-bark);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem 0;
+}
+
+/* Keeps Bootstrap section dark even if bg-light class is present */
+section.bg-light {
+  background-color: var(--color-bark) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ----------------------------------------------------------
    DESTINATION CARDS
    ---------------------------------------------------------- */
 
