@@ -194,4 +194,4 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('modalImage').src = '';
   });
 
-}); // runs after the page has fully loaded
+}); 
