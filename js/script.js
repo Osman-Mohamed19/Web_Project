@@ -197,16 +197,16 @@ document.addEventListener('DOMContentLoaded', function () {
 }); 
 
 /* ----------------------------------------------------------
-   DARK / LIGHT MODE TOGGLE
-   Third interactive JS feature
+   DARK / LIGHT MODE TOGGLE SWITCH
+   Third interactive JS feature — sliding pill toggle
    ---------------------------------------------------------- */
 document.addEventListener('DOMContentLoaded', function () {
 
-  // Find the toggle button in the navbar
-  const toggleBtn = document.getElementById('themeToggle');
+  // Find the toggle switch in the navbar
+  const toggleSwitch = document.getElementById('themeToggle');
 
-  // If there is no toggle button on this page, stop here
-  if (!toggleBtn) return;
+  // If there is no toggle on this page, stop here
+  if (!toggleSwitch) return;
 
   // Check if the user has a saved preference from a previous visit
   const savedTheme = localStorage.getItem('theme');
@@ -214,24 +214,19 @@ document.addEventListener('DOMContentLoaded', function () {
   // Apply saved theme on page load
   if (savedTheme === 'light') {
     document.body.classList.add('light-mode');
-    toggleBtn.textContent = '🌙 Dark Mode';
-  } else {
-    toggleBtn.textContent = '☀️ Light Mode';
   }
 
-  // Listen for when the user clicks the toggle button
-  toggleBtn.addEventListener('click', function () {
+  // Listen for when the user clicks the toggle switch
+  toggleSwitch.addEventListener('click', function () {
 
     // Toggle the light-mode class on the body
     document.body.classList.toggle('light-mode');
 
-    // Check which mode is now active and update button label
+    // Save the user's preference so it persists across pages
     if (document.body.classList.contains('light-mode')) {
-      toggleBtn.textContent = '🌙 Dark Mode';
-      localStorage.setItem('theme', 'light'); // save preference
+      localStorage.setItem('theme', 'light');
     } else {
-      toggleBtn.textContent = '☀️ Light Mode';
-      localStorage.setItem('theme', 'dark'); // save preference
+      localStorage.setItem('theme', 'dark');
     }
 
   });
