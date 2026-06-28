@@ -717,6 +717,85 @@ body.light-mode .navbar-toggler-icon {
 }
 
 /* ----------------------------------------------------------
+   THEME TOGGLE SWITCH
+   Sliding pill toggle — sun icon for dark, moon for light
+   ---------------------------------------------------------- */
+
+/* Outer clickable wrapper */
+.theme-switch {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* The pill track */
+.theme-switch-track {
+  width: 64px;
+  height: 32px;
+  border-radius: 999px;
+  background-color: #2a2a2a;
+  position: relative;
+  transition: background-color 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Light mode — track becomes white */
+body.light-mode .theme-switch-track {
+  background-color: #fff;
+  border-color: #d0c9c0;
+}
+
+/* The sliding circle thumb */
+.theme-switch-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Light mode — thumb slides to the right and goes dark */
+body.light-mode .theme-switch-thumb {
+  transform: translateX(32px);
+  background-color: #1a1a1a;
+}
+
+/* Sun and moon icons inside the thumb */
+.theme-icon {
+  font-size: 0.9rem;
+  line-height: 1;
+  position: absolute;
+}
+
+/* Sun shows in dark mode */
+.theme-icon.sun {
+  display: block;
+  color: #1a1a1a;
+}
+
+/* Moon shows in light mode */
+.theme-icon.moon {
+  display: none;
+  color: #fff;
+}
+
+/* Swap icons when light mode is active */
+body.light-mode .theme-icon.sun {
+  display: none;
+}
+
+body.light-mode .theme-icon.moon {
+  display: block;
+}
+
+/* ----------------------------------------------------------
    SITE FOOTER
    ---------------------------------------------------------- */
 
