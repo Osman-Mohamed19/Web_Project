@@ -593,6 +593,130 @@ section.bg-light {
 }
 
 /* ----------------------------------------------------------
+   LIGHT MODE OVERRIDE
+   Applied when body has the light-mode class
+   ---------------------------------------------------------- */
+
+body.light-mode {
+  background-color: #f5f0eb;
+  color: #1a1a1a;
+}
+
+/* Headings */
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6 {
+  color: #1a1a1a;
+}
+
+/* Navbar */
+body.light-mode .navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #e0d9cf;
+}
+
+body.light-mode .navbar-brand {
+  color: #1a1a1a !important;
+}
+
+body.light-mode .navbar-nav .nav-link {
+  color: #1a1a1a !important;
+}
+
+body.light-mode .navbar-nav .nav-link.active,
+body.light-mode .navbar-nav .nav-link:hover {
+  color: var(--color-amber) !important;
+}
+
+/* Page header banner */
+body.light-mode .page-header {
+  background-color: #ede8e1;
+}
+
+body.light-mode .page-header h1 {
+  color: #1a1a1a;
+}
+
+/* Cards */
+body.light-mode .destination-card,
+body.light-mode .package-card,
+body.light-mode .testimonial-card,
+body.light-mode .team-card,
+body.light-mode .value-card,
+body.light-mode .contact-info-card {
+  background-color: #fff;
+  border-color: #d0c9c0;
+}
+
+/* Package header */
+body.light-mode .package-header {
+  background-color: #ede8e1;
+  color: #1a1a1a;
+}
+
+body.light-mode .package-header h2 {
+  color: #1a1a1a;
+}
+
+/* Package includes text */
+body.light-mode .package-includes li {
+  color: #1a1a1a;
+}
+
+/* Package price */
+body.light-mode .package-price {
+  color: #1a1a1a;
+  border-bottom-color: #d0c9c0;
+}
+
+/* Contact form */
+body.light-mode .contact-form .form-control,
+body.light-mode .contact-form .form-select {
+  background-color: #fff;
+  color: #1a1a1a;
+  border-color: #d0c9c0;
+}
+
+/* Hero section */
+body.light-mode .hero {
+  background-color: #ede8e1;
+}
+
+body.light-mode .hero h1,
+body.light-mode .hero .lead {
+  color: #1a1a1a;
+}
+
+/* Filter bar */
+body.light-mode section.bg-light {
+  background-color: #ede8e1 !important;
+}
+
+/* Testimonial blockquote */
+body.light-mode .testimonial-card blockquote {
+  color: #1a1a1a;
+}
+
+body.light-mode .author-name {
+  color: #1a1a1a;
+}
+
+/* Footer */
+body.light-mode footer {
+  background-color: #ede8e1;
+  color: #1a1a1a;
+  border-top-color: #d0c9c0;
+}
+
+/* Hamburger toggler icon on light mode */
+body.light-mode .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ----------------------------------------------------------
    SITE FOOTER
    ---------------------------------------------------------- */
 
