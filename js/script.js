@@ -80,7 +80,7 @@
 
   });
 
-})(); // runs the function immediately when the script loads
+})(); 
 
 /* ----------------------------------------------------------
    DESTINATION FILTER
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-}); // runs after the page has fully loaded
+});
 /* ----------------------------------------------------------
    GALLERY FILTER
    Filters photo grid by category when a button is clicked
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-}); // runs after the page has fully loaded
+}); 
 
 /* ----------------------------------------------------------
    GALLERY LIGHTBOX
@@ -195,3 +195,45 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 }); 
+
+/* ----------------------------------------------------------
+   DARK / LIGHT MODE TOGGLE
+   Third interactive JS feature
+   ---------------------------------------------------------- */
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Find the toggle button in the navbar
+  const toggleBtn = document.getElementById('themeToggle');
+
+  // If there is no toggle button on this page, stop here
+  if (!toggleBtn) return;
+
+  // Check if the user has a saved preference from a previous visit
+  const savedTheme = localStorage.getItem('theme');
+
+  // Apply saved theme on page load
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-mode');
+    toggleBtn.textContent = '🌙 Dark Mode';
+  } else {
+    toggleBtn.textContent = '☀️ Light Mode';
+  }
+
+  // Listen for when the user clicks the toggle button
+  toggleBtn.addEventListener('click', function () {
+
+    // Toggle the light-mode class on the body
+    document.body.classList.toggle('light-mode');
+
+    // Check which mode is now active and update button label
+    if (document.body.classList.contains('light-mode')) {
+      toggleBtn.textContent = '🌙 Dark Mode';
+      localStorage.setItem('theme', 'light'); // save preference
+    } else {
+      toggleBtn.textContent = '☀️ Light Mode';
+      localStorage.setItem('theme', 'dark'); // save preference
+    }
+
+  });
+
+});
