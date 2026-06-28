@@ -14,12 +14,12 @@ Safari Trails Travel Agency is a responsive travel website developed for the Web
 
 1. Home
 2. About Us
-3. Destinations
-4. Tour Packages
-5. Gallery
-6. Testimonials
-7. FAQ
-8. Contact Us
+3. Contact Us
+4. Destinations
+5. Tour Packages
+6. Gallery
+7. Testimonials
+8. FAQ
 
 ## Features
 
